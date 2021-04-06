@@ -13,10 +13,10 @@ pipeline {
                     echo "this is second step"
                 '''
                 retry(3) {
-                    sh 'this is retry'
+                    sh 'echo "this is retry"'
                 }
                 timeout(time: 3, unit: 'MINUTES') {
-                    sh 'this is timeout'
+                    sh 'echo "this is timeout'
                 }
             }
         }
